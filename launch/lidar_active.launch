@@ -1,0 +1,5 @@
+<launch>
+    <node name="agv_lidar_node" pkg="yori" type="lidar_active.py" output="screen"/>
+    <node pkg="myagv_odometry" type="myagv_odometry_node" name="myagv_odometry_node" output="screen" />
+    <include file="$(find ydlidar_ros_driver)/launch/X2.launch" />
+</launch>
